@@ -1,12 +1,11 @@
-package web.rest.dto;
+package controller.dto.compress;
 
 /**
  * Created by C.CLAGOM on 4/5/2019.
  */
-public class OutDTO {
+public class CompressInDTO {
 
     private String value;
-    private String compressed;
 
     public String getValue() {
         return value;
@@ -16,19 +15,11 @@ public class OutDTO {
         this.value = value;
     }
 
-    public String getCompressed() {
-        return compressed;
-    }
-
-    public void setCompressed(String compressed) {
-        this.compressed = compressed;
-    }
 
     @Override
     public String toString() {
-        return "InDTO{" +
+        return "CompressInDTO{" +
                 "value='" + value + '\'' +
-                ", compressed='" + compressed + '\'' +
                 '}';
     }
 }

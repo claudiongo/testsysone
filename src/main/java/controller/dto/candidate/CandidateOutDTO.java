@@ -1,9 +1,9 @@
-package web.rest.dto;
+package controller.dto.candidate;
 
 /**
  * Created by C.CLAGOM on 4/5/2019.
  */
-public class InDTO {
+public class CandidateOutDTO {
 
     private String value;
 
@@ -15,10 +15,9 @@ public class InDTO {
         this.value = value;
     }
 
-
     @Override
     public String toString() {
-        return "InDTO{" +
+        return "CandidateOutDTO{" +
                 "value='" + value + '\'' +
                 '}';
     }
