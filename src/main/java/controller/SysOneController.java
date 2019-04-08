@@ -19,10 +19,8 @@ public class SysOneController {
 
     @RequestMapping(value = "/compress",
             produces = {"application/json"},
-            //consumes = {"application/json"},
             method = {RequestMethod.GET, RequestMethod.POST})
     @PostMapping(path="/compress")
-   // public ResponseEntity<CompressOutDTO> compressString(@Valid @RequestBody CompressInDTO compressInDTO) {
     public ResponseEntity<CompressOutDTO> compressString(@RequestParam ("value") String value) {
         CompressOutDTO resultado = null;
         CompressInDTO compressInDTO = new CompressInDTO();
