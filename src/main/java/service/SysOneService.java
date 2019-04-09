@@ -1,13 +1,18 @@
 package service;
 
+import com.sysone.demo.DemoApplication;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.logging.Logger;
 
 @Service
 public class SysOneService {
+
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(DemoApplication.class);
 
     public StringBuffer compress(List<String> items) {
         String prev = "";
@@ -39,6 +44,8 @@ public class SysOneService {
         for (int i = 0; i < value.length(); i++) {
             if (!isNumeric(String.valueOf(value.charAt(i)))){
                 list.add(String.valueOf(value.charAt(i)).toUpperCase());
+            } else {
+                logger.debug("numeros no! ("+String.valueOf(value.charAt(i)+")"));
             }
         }
         return list;
